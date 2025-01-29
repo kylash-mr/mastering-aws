@@ -30,10 +30,10 @@ To set up VPC flow logs:
 To generate logs, you can use the cloud shell and run a script to continuously hit a website and capture traffic:
 
 ```bash
-curl ec2-35-173-233-127.compute-1.amazonaws.com
+hostname
 while true
 do
-  curl ec2-35-173-233-127.compute-1.amazonaws.com | grep -I nginx
+  curl $(hostname) | grep -i nginx
   sleep 1
 done
 ```
